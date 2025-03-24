@@ -23,6 +23,6 @@ console.log(p.str);
 //8790 8987 7777 9007
 ```
 
-### 02 Exercice Max
+# Exercice Max
 
 Ecrire un script pour déterminer le maximun de trois variables distinctes a, b et c
