@@ -25,4 +25,4 @@ console.log(p.str);
 
 # Exercice Max
 
-Ecrire un script pour déterminer le maximun de trois variables distinctes a, b et c
+Ecrire un script pour déterminer le maximun de trois variables distinctes a, b et c. N'utilisez pas de fonction native de JS.
