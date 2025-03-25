@@ -6,7 +6,7 @@ Au cœur de React se trouve le concept de **composants**, qui permettent de divi
 
 L'un des principaux atouts de React est son **Virtual DOM** (Document Object Model virtuel). Contrairement au DOM classique, le Virtual DOM améliore les performances en réduisant les mises à jour coûteuses sur la page. En effet, React maintient une copie virtuelle de l'interface utilisateur, compare les changements entre les états précédents et actuels, et met à jour uniquement les parties nécessaires du DOM réel.
 
-React est particulièrement bien adapté pour des applications à état dynamique grâce à sa gestion efficace de l'état avec des concepts comme les **hooks** (ex. : `useState`, `useEffect`) et l'intégration avec des outils de gestion d'état globaux tels que **Redux** ou **Context API**.
+React est particulièrement bien adapté pour des applications à état dynamique grâce à sa gestion efficace de l'état avec des concepts comme les **hooks** (ex. : `useState`, `useEffect`) et l'intégration avec des outils de gestion d'état globaux tels que **Redux**, **Zustand** ou **Context API**
 
 ---
 
