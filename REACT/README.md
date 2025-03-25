@@ -10,7 +10,7 @@
 6. State [state](./Supports/chap_state.md)
 7. Hooks [Hook](./Supports/chap-hook-part_01.md)
 8. State [state](./Supports/chap_form.md)
-9. Composition [state](./Supports/chap-composition.md)
+9. Composition [component](./Supports/chap-composition.md)
 
 
 ## Modèle
