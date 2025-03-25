@@ -114,7 +114,7 @@ const MESSAGES = [
 
 ---
 
-### **02 Exercice : Affichage des Produits avec des Couleurs Différentes**  
+### **02 - Exercice : Affichage des Produits avec des Couleurs Différentes**  
 
 1. Afficher les fruits et les légumes dans **deux listes distinctes** :  
    - Une liste pour les **fruits**  
