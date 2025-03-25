@@ -71,27 +71,9 @@ Que permet la méthode `setInterval` en JavaScript ?
 * [ ] Exécuter une fonction une seule fois après un délai spécifié.  
 * [ ] Exécuter une fonction tant que la promesse associée est résolue.  
 
-## Question 6  
-
-Quel est le problème potentiel de l'exemple suivant en utilisant `setInterval` ?  
-
-```js
-let count = 0;
-setInterval(() => {
-    console.log(count);
-    count++;
-}, 1000);
-```  
-
-*Réponses* :  
-* [ ] Le code produira une erreur car `setInterval` nécessite une promesse.  
-* [ ] Le code produit une boucle infinie si `count` n'est pas réinitialisé.  
-* [ ] Le code produira une erreur car `setInterval` ne fonctionne qu'avec des nombres.  
-* [ ] Il n'y a pas de problème, le code affichera simplement `count` toutes les secondes.  
-
 ---
 
-## Question 7  
+## Question 6  
 
 Que se passera-t-il si le code suivant est exécuté ?  
 
@@ -111,7 +93,7 @@ setInterval(() => {
 
 ---
 
-## Question 8  
+## Question 7  
 
 Quelle est la différence entre le DOM virtuel et le DOM réel dans React ?  
 
@@ -121,7 +103,7 @@ Quelle est la différence entre le DOM virtuel et le DOM réel dans React ?
 * [ ] Le DOM virtuel est une alternative au DOM réel et n'interagit pas avec le navigateur.  
 * [ ] Le DOM réel et le DOM virtuel sont identiques, mais écrits dans des langages différents.  
 
-## Question 9  
+## Question 8  
 
 Quelle est la bonne façon de transmettre une propriété dans le composant React suivant ?  
 
@@ -137,7 +119,7 @@ const Welcome = (props) => <h1>{props.message}</h1>;
 
 ---
 
-## Question 10  
+## Question 9  
 
 Que signifie le fait que JavaScript est asynchrone ?  
 
