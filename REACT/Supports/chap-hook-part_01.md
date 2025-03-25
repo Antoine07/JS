@@ -151,16 +151,14 @@ Nous allons créer un composant qui affiche un message après un délai défini,
 
 ---
 
-### Fonctionnement
+### Fonctionnement répondez aux questions suivantes 
 
-1. **Montage :**
-   - Lors du montage du composant, un `setTimeout` est créé pour afficher le message après 5 secondes (5000 ms).
-   - L'effet est défini dans un **useEffect** avec le délai comme dépendance.
-
-2. **Démontage :**
-   - Si le composant est retiré du DOM avant que le timeout soit terminé, la fonction de nettoyage `clearTimeout` est appelée pour éviter d'exécuter le code une fois le composant démonté.
-
+1. **Que se passe t il au montage :**
+  
+2. **Au démontage Démontage :**
+  
 ---
+
 ### 📝 **Énoncé de l'exercice : Calculatrice en React**  
 
 #### **Objectif**  
