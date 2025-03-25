@@ -145,37 +145,70 @@ const students = [
 
 ---
 
+### **Exercice : Affichage des Produits avec des Couleurs Différentes**  
 
-### 03 - Exercice : Horloge
+1. Afficher les fruits et les légumes dans **deux listes distinctes** :  
+   - Une liste pour les **fruits**  
+   - Une liste pour les **légumes**  
+2. Ajouter un **titre** au-dessus de chaque liste :  
+   - "Fruits"  
+   - "Légumes"  
+3. Chaque fruit doit avoir une **couleur unique**, idem pour chaque légume.  
 
-Dans un fichier `index_horloge_clock.html`, créez un composant `<Clock />` qui affiche une horloge mise à jour en temps réel.
+---
 
-#### Indications :
-- Utilisez un `setInterval` pour re-rendre le composant toutes les secondes.
-- Générez l'heure actuelle avec `new Date()`.
-
-#### Exemple attendu :
-
-```txt
-10h 25m 30s
-```
-
-#### Exemple de structure :
+### **Les données :**  
 
 ```jsx
-const Clock = () => {
-  const now = new Date();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
+const products = [
+  { title: 'Chou', isFruit: false, id: 1, color: 'darkgreen' },
+  { title: 'Ail', isFruit: false, id: 2, color: 'brown' },
+  { title: 'Pomme', isFruit: true, id: 3, color: 'red' },
+];
+```
 
-  return (
-    <div>
-      {hours}h {minutes}m {seconds}s
-    </div>
-  );
-};
+## Indications avec filter pour l'exercice
 
+### **📝 Rappel ultra rapide sur `.filter()` en JS**  
 
+- **Filtrer un tableau** selon une condition  
+- **Ne modifie pas l'original**, retourne un **nouveau tableau**  
+
+```js
+const numbers = [1, 2, 3, 4, 5, 6];
+const even = numbers.filter(n => n % 2 === 0);
+console.log(even); // [2, 4, 6]
+```
+
+🔹 **Exemple avec objets** :  
+```js
+const products = [
+  { title: 'Chou', isFruit: false },
+  { title: 'Pomme', isFruit: true }
+];
+const fruits = products.filter(p => p.isFruit);
+console.log(fruits); // [{ title: 'Pomme', isFruit: true }]
+```
+
+### **🌟 Exemple combiné `.map()` + `.filter()` en JavaScript**  
+
+👉 **Filtrer** une liste puis **modifier** les résultats avec `.map()`.  
+
+```js
+const products = [
+  { title: 'Chou', isFruit: false },
+  { title: 'Ail', isFruit: false },
+  { title: 'Pomme', isFruit: true },
+  { title: 'Banane', isFruit: true }
+];
+
+// 1️⃣ Filtrer uniquement les fruits
+// 2️⃣ Transformer les noms en majuscules avec .map()
+const fruitNames = products
+  .filter(product => product.isFruit)  // 🔹 Garde uniquement les fruits
+  .map(product => product.title.toUpperCase()); // 🔹 Transforme en majuscules
+
+console.log(fruitNames); 
+// Résultat : ['POMME', 'BANANE']
 ```
 

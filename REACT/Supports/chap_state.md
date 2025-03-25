@@ -1,16 +1,17 @@
-# React State
+# **React State**
 
-Un **state** permet d'ajouter un état local à un composant fonctionnel. Contrairement aux props, qui sont immuables et passées par un composant parent, le state peut être mis à jour localement à l'intérieur du composant, et React gère automatiquement le re-rendu lorsqu'il change.
+Un **state** permet d'ajouter un état local à un composant fonctionnel. Contrairement aux props, qui sont immuables et passées par un composant parent, le state peut être mis à jour localement à l'intérieur du composant. **React gère automatiquement le re-rendu du composant lorsque le state change.**  
 
 En React, pour définir et manipuler un state dans un composant fonctionnel, nous utilisons le Hook `useState`.
 
-### Déclaration du State
+---
 
-Voici un exemple de base avec `useState` :
+## **Déclaration du State**
+
+Voici un exemple de base avec `useState` :  
 
 ```jsx
-
-fonction Counter(){
+function Counter() {
   // Déclaration d'un state local "count" avec une valeur initiale de 0
   const [count, setCount] = React.useState(0);
 
@@ -25,23 +26,43 @@ fonction Counter(){
       <button onClick={increment}>Increment</button>
     </div>
   );
-};
+}
 ```
 
-### Explications
+---
 
-1. **Lecture du state :** Le state est lu directement à partir de la valeur retournée par `useState` (ici, `count`).
-2. **Mise à jour du state :** Pour modifier le state, on utilise la fonction retournée par `useState` (ici, `setCount`), qui déclenche un re-rendu du composant avec la nouvelle valeur.
-
-> ⚠️ Vous **ne pouvez pas** modifier directement le state (par exemple, `count++` ne déclencherait pas de re-rendu). La mise à jour doit se faire via la fonction fournie par `useState`.
+## **Explications**
+1. **Lecture du state :**  
+   - Le state est lu directement via `count`, retourné par `useState`.
+2. **Mise à jour du state :**  
+   - Pour modifier le state, on utilise la fonction `setCount`.  
+   - ⚠️ **Ne modifiez pas le state directement** (`count++` ne fonctionne pas). Toujours utiliser `setCount(newValue)`.  
 
 ---
 
-## Exercice 1 : Horloge avec State
+## **Exercices**
 
-Utilisez le modèle suivant : [template](../Models/model.html)
+### **1️⃣ Exercice - Compteur avec Réinitialisation**  
+👉 **Objectif :** Ajouter un bouton pour réinitialiser le compteur à 0.  
 
-Ré-implémentez une horloge en utilisant `useState` pour gérer le temps qui passe (heures, minutes, secondes) et `useEffect` pour mettre à jour le state chaque seconde.
+**Instructions :**  
+- Ajoutez un bouton `"Reset"` qui remet le compteur à zéro lorsqu'on clique dessus.  
+
+**Résultat attendu :**  
+- Le compteur s'incrémente en cliquant sur `"Increment"`.  
+- Le compteur revient à `0` lorsqu'on clique sur `"Reset"`.  
 
 ---
-## TP : [game](../TP/01_game.md)
+
+### **2️⃣ Exercice - Affichage d’un message conditionnel**  
+👉 **Objectif :** Modifier l'affichage du message en fonction du nombre.  
+
+**Instructions :**  
+- Si `count` est à 0, afficher `"Le compteur est vide"`.  
+- Si `count` est supérieur à 5, afficher `"Attention, grande valeur !"`.  
+- Sinon, afficher `"Valeur normale"`.  
+
+**Résultat attendu :**  
+- Le message change en fonction de la valeur du compteur.  
+
+---

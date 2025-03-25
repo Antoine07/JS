@@ -161,13 +161,47 @@ Nous allons créer un composant qui affiche un message après un délai défini,
    - Si le composant est retiré du DOM avant que le timeout soit terminé, la fonction de nettoyage `clearTimeout` est appelée pour éviter d'exécuter le code une fois le composant démonté.
 
 ---
+### 📝 **Énoncé de l'exercice : Calculatrice en React**  
 
-
-### Exercice  Gestion du cycle de vie
-Créez un composant qui compte les clics et affiche un message lorsque vous arrivez à 10 clicks réalisés.
+#### **Objectif**  
+Créer une calculatrice interactive en React permettant d’effectuer des opérations simples (addition, soustraction, multiplication, division) entre deux nombres saisis par l'utilisateur.
 
 ---
 
-## TP Calculatrice 
+#### **Consignes**  
 
-Faites le TP suivant : [tp calculatrice](../TP/02_calculatrice.md)
+1. **Créer un composant `Calculator` qui :**  
+   - Contient deux champs de saisie permettant d’entrer des nombres.  
+   - Possède une liste déroulante (`select`) pour choisir une opération (+, -, ×, ÷).  
+   - Affiche un bouton "Calculer" qui effectue l’opération sélectionnée lorsque l’on clique dessus.  
+   - Affiche le résultat du calcul sous le bouton.  
+
+2. **Gestion des erreurs :**  
+   - Empêcher l’utilisateur d’effectuer une division par zéro (afficher un message d’erreur dans ce cas).  
+   - Vérifier que les entrées sont bien des nombres avant de faire le calcul.  
+
+---
+
+#### **Exemple attendu**  
+
+📌 **L’utilisateur entre :**  
+- **Nombre 1** → `10`  
+- **Opération** → `×`  
+- **Nombre 2** → `5`  
+- **Clique sur "Calculer"**  
+
+🖥 **Affichage :** `Résultat : 50`  
+
+📌 **Si l’utilisateur tente de diviser par zéro :**  
+🖥 **Affichage :** `Erreur : division par zéro`  
+
+---
+
+#### **Défis supplémentaires (facultatif) :**  
+✅ **Ajouter un bouton "Réinitialiser"** pour effacer les champs et le résultat.  
+✅ **Améliorer l'interface avec du CSS** pour rendre l’application plus agréable à utiliser.  
+
+---
+
+### **Livrable**  
+Un fichier HTML contenant le code React de la calculatrice, fonctionnant avec Babel (comme dans le cours).  
