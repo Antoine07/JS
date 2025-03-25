@@ -80,8 +80,7 @@ Créez un dossier src et créez le fichier suivant
 {
   "compilerOptions": {
     "target": "ESNext",                                  
-    "module": "commonjs",                                 
-    //"moduleResolution": "bundler",                    
+    "module": "commonjs",                                                 
     "outDir": "./dist",                                  
     "esModuleInterop": true,                             
     "strict": true,                                      
