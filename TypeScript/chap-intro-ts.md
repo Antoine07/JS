@@ -69,7 +69,7 @@ npm install typescript --save-dev
 npm install nodemon ts-node-dev --save-dev
 ```  
 
-Créez un dossier src, puis initialisez le projet avec la commande `tsc --init`
+Créez un dossier src et créez le fichier suivant
 
 :rocket:
 
@@ -96,7 +96,7 @@ Modifiez maintenant le fichier package.json, ajoutez la ligne suivante dans la p
 
 ```json
 "scripts": {
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node-dev' src/app.ts"
+    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node-dev src/index.ts"
   },
 ```
 
