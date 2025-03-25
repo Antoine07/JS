@@ -48,7 +48,7 @@ function Counter() {
 **Instructions :**  
 - Ajoutez un bouton `"Reset"` qui remet le compteur à zéro lorsqu'on clique dessus.  
 
-**Résultat attendu :**  
+**Specs :**  
 - Le compteur s'incrémente en cliquant sur `"Increment"`.  
 - Le compteur revient à `0` lorsqu'on clique sur `"Reset"`.  
 
@@ -57,12 +57,10 @@ function Counter() {
 ### **2️⃣ Exercice - Affichage d’un message conditionnel**  
 👉 **Objectif :** Modifier l'affichage du message en fonction du nombre.  
 
-**Instructions :**  
+**Specs :**  
 - Si `count` est à 0, afficher `"Le compteur est vide"`.  
 - Si `count` est supérieur à 5, afficher `"Attention, grande valeur !"`.  
 - Sinon, afficher `"Valeur normale"`.  
 
-**Résultat attendu :**  
-- Le message change en fonction de la valeur du compteur.  
 
 ---
