@@ -114,37 +114,6 @@ const MESSAGES = [
 
 ---
 
-### 02 - Exercice : Moyenne des étudiants
-
-Dans un fichier `index_students_avg.html`, créez une application qui affiche une liste d'étudiants avec leur nom et leur moyenne calculée.
-
-#### Données :
-
-```js
-const students = [
-  { notes: [12, 11, 10], name: "Alan" },
-  { notes: [18, 10, 19], name: "Alice" },
-  { notes: [10, 9, 11], name: "Bernard" },
-  { notes: [11, 17, 19], name: "Sophie" },
-];
-```
-
-#### Hiérarchie des composants :
-
-```jsx
-<App />
-├── <Student />
-├── <Student />
-├── <Student />
-└── <Student />
-```
-
-**Indications** :
-- Créez deux composants fonctionnels : `<App />` et `<Student />`.
-- Utilisez une fonction pour calculer la moyenne des notes.
-
----
-
 ### **Exercice : Affichage des Produits avec des Couleurs Différentes**  
 
 1. Afficher les fruits et les légumes dans **deux listes distinctes** :  
@@ -168,8 +137,6 @@ const products = [
 ```
 
 ## Indications avec filter pour l'exercice
-
-### **📝 Rappel ultra rapide sur `.filter()` en JS**  
 
 - **Filtrer un tableau** selon une condition  
 - **Ne modifie pas l'original**, retourne un **nouveau tableau**  
