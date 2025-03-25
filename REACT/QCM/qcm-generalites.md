@@ -130,3 +130,67 @@ Que signifie le fait que JavaScript est asynchrone ?
 * [ ] JavaScript nécessite plusieurs threads pour exécuter des opérations simultanément.  
 
 --- 
+
+Voici cinq questions axées sur les props, le principe top-down et la réutilisabilité en React :
+
+---
+
+## Question 10
+
+Quel est le rôle des props en React ?  
+
+*Réponses* :  
+* [ ] Elles permettent de stocker des données locales dans un composant.  
+* [ ] Elles permettent de transmettre des données d’un composant parent à un composant enfant.  
+* [ ] Elles remplacent complètement l’état (`useState`).  
+* [ ] Elles sont utilisées uniquement dans les composants de classe.  
+
+---
+
+## Question 11
+
+Pourquoi dit-on que React suit un modèle "top-down" pour la gestion des données ?  
+
+*Réponses* :  
+* [ ] Parce que les données circulent uniquement du bas vers le haut dans l’arborescence des composants.  
+* [ ] Parce que les composants enfants peuvent directement modifier les données du composant parent.  
+* [ ] Parce que les données sont transmises des composants parents vers les composants enfants via les props.  
+* [ ] Parce que React utilise une base de données interne pour partager les données entre tous les composants.  
+
+---
+
+## Question 12
+
+Comment un composant enfant peut-il modifier une donnée transmise via les props ?  
+
+*Réponses* :  
+* [ ] Il ne peut pas modifier directement une prop, mais peut appeler une fonction passée par le parent pour modifier l’état.  
+* [ ] Il peut modifier directement la valeur de la prop avec `setProps()`.  
+* [ ] Il peut utiliser `useState` pour modifier la prop reçue.  
+* [ ] Il doit créer une nouvelle prop et la renvoyer au parent.  
+
+---
+
+## Question 13
+
+Pourquoi est-il recommandé de rendre les composants réutilisables en React ?  
+
+*Réponses* :  
+* [ ] Pour éviter de dupliquer du code et faciliter la maintenance.  
+* [ ] Pour que chaque composant ait son propre état et soit indépendant.  
+* [ ] Pour améliorer les performances en exécutant le code plus rapidement.  
+* [ ] Pour s'assurer que chaque composant possède un style unique.  
+
+---
+
+## Question 14
+
+Quelle est la meilleure pratique pour rendre un composant flexible et réutilisable avec les props ?  
+
+*Réponses* :  
+* [ ] Ne jamais utiliser de props et coder chaque variation du composant séparément.  
+* [ ] Utiliser des props avec des valeurs par défaut et permettre des personnalisations via des props dynamiques.  
+* [ ] Toujours stocker toutes les valeurs possibles dans un `store` interne au composant.  
+* [ ] Ajouter une prop unique pour chaque variante d’affichage possible, même si elles sont inutilisées.  
+
+---
