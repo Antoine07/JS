@@ -196,10 +196,7 @@ Créer une calculatrice interactive en React permettant d’effectuer des opéra
 ---
 
 #### **Spec supplémentaires :**  
-✅ **Ajouter un bouton "Réinitialiser"** pour effacer les champs et le résultat.  
-✅ **Ajoutez une fonction mémoire à votre calculatrice.  
-✅ **Utilisez un useEffect pour améliorer l'expérience utilisateur. 
----
-
-### **Livrable**  
-Un fichier HTML contenant le code React de la calculatrice, fonctionnant avec Babel (comme dans le cours).  
+✅ Ajouter un bouton "Réinitialiser"** pour effacer les champs et le résultat.  
+✅ Ajoutez une fonction mémoire à votre calculatrice.  
+✅ Utilisez un useEffect pour améliorer l'expérience utilisateur. 
+ 
