@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#1A1A2E',
+                        'dark-card': '#16213E',
+                        'accent': '#0F3460',
+                        'primary-text': '#EAEAEA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-dark-bg text-primary-text font-sans flex items-center justify-center h-screen">
+    <div id="root"></div>
+    <script type="text/babel">
+
+        function Form(props) {
+
+            const [name, setName] = React.useState('');
+
+            const handleChange = (e) => {
+                setName( e.target.value );
+            }
+            const handleSubmit = (e) =>{
+                e.preventDefault(); // bloque l'envoie du formualire
+                console.log(name, name.toUpperCase());
+            }
+
+            return (
+                <React.Fragment>
+                    <form onSubmit={handleSubmit}>
+                        <p>{name}</p>
+                        <p><input onChange={handleChange} type="text" name="name" value={name} /></p>
+                        <button type="submit">Go</button>
+                    </form>
+                </React.Fragment>
+            )
+        }
+
+        function Time(props) {
+            const [time, setTime] = React.useState(0);
+            const [status, setStatus] = React.useState(true);
+
+            React.useEffect(() => {
+                const timer = setTimeout(() => {
+                    setStatus(false)
+                }, 5 * 1000);
+
+                return () => {
+                    console.log(status)
+                    clearTimeout(timer); // permet de nettoyer certain état ou service 
+                }
+            }, [status]);
+
+            return (
+                <React.Fragment>
+                    {status && (
+                        <p>Hello je suis le message visible pendant 5 secondes</p>
+                    )}
+                </React.Fragment>
+            )
+        }
+
+        function Message(props) {
+
+            React.useEffect(() => {
+                console.log('une props vient du parent et a changé', props)
+            }, [props.number])
+
+            return (
+                <React.Fragment>
+                    {props.number > 5 ? <p>Hello, je suis un composant</p> : null}
+                </React.Fragment>
+            )
+        }
+
+        function App(props) {
+
+            // on définit un state avec sa variable et sa fonction de mise à jour
+            const [count, setCount] = React.useState(0);
+            const [count2, setCount2] = React.useState(0);
+
+            const counter = () => {
+                setCount(count + 1);
+            }
+
+            const counter2 = () => {
+                setCount2(count2 + 1);
+            }
+
+            const reset = () => {
+                setCount(0);
+            }
+
+            // useEffect watch les states 
+            React.useEffect(() => {
+                console.log('useEffect', count);
+            }); // il watch tous les states
+
+
+            // useEffect watch les states 
+            React.useEffect(() => {
+                console.log('useEffect', count);
+            }, []); // le tableau indique ce qu'il doit watcher ici rien car le tableau est vide
+
+            // useEffect watch les states 
+            React.useEffect(() => {
+                console.log('useEffect', count);
+            }, [count2]); // le tableau indique ce qu'il doit watcher ici rien car le tableau est vide
+
+
+            return (
+                <div className="bg-dark-card p-8 rounded-xl shadow-lg text-center">
+                    <p>Count : {count}  Count2 :{count2}</p>
+                    <div>
+                        <button onClick={counter}>+1 count</button>
+                        <br />
+                        <button onClick={counter2}>+1 count2 </button>
+                    </div>
+                    <div>
+                        <button onClick={reset}>reset</button>
+                    </div>
+                    {count > 5 && (
+                        <p>Supérieur à 5 </p>
+                    )}
+                    {count > 5 ? <p>Supérieur à 5 </p> : null}
+
+                    <br />
+                    <Message number={count} />
+                    <br />
+                    <Time />
+                    <br />
+                    <Form />
+                </div>
+            )
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(
+            <App />
+        );
+    </script>
+</body>
+
+</html>
