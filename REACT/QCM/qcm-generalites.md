@@ -4,7 +4,7 @@
 Que signifie JSX ?  
 
 *Réponses* :  
-* [ ] C'est un langage qui permet de générer des objets avec une notation HTML.  
+* [X] C'est un langage qui permet de générer des objets avec une notation HTML.  
 * [ ] C'est un langage qui permet de typer des variables et objets JS.  
 * [ ] C'est un langage qui permet de générer des classes avec une notation HTML.  
 * [ ] C'est un langage qui permet de générer des objets avec une notation XML.  
@@ -15,17 +15,17 @@ Définissez simplement ce que représente le DOM virtuel en choisissant une seul
 
 *Réponses* :  
 * [ ] C'est une représentation du DOM réel sous forme d'une arborescence XML.  
-* [ ] C'est une représentation du DOM réel sous forme d'objets simples JS.  
+* [X] C'est une représentation du DOM réel sous forme d'objets simples JS.  
 * [ ] C'est une représentation du DOM réel sous forme de fonctions écrites en C.  
 * [ ] C'est une représentation du DOM réel sous forme de tableau JS et XML.  
 
 ## Question 3  
 
-Est-ce que le code dans le fichier App.js suivant est valide ?  
+Est-ce que le code dans le fichier App.jsx suivant est valide ?  
 
 ```js
 const Message = (props) => {
-    props.message = "Nouveau message";
+    props.message = "Nouveau message"; // LECTURE SEULE
     return (
         <p>{props.message}</p>
     );
@@ -36,7 +36,7 @@ const App = () => <Message message="message" />;
 *Réponses* :  
 * [ ] Oui car la propriété est passée par décomposition.  
 * [ ] Oui car les propriétés sont mutables.  
-* [ ] Non car les propriétés sont en lecture seule.  
+* [X] Non car les propriétés sont en lecture seule.  
 
 ## Question 4  
 
@@ -58,8 +58,25 @@ const App = () => (
 *Réponses* :  
 * [ ] Il est valide et affichera trois paragraphes dans le DOM.  
 * [ ] Il est valide et affichera un paragraphe dans le DOM.  
-* [ ] Il n'est pas valide, le code produira une erreur.  
+* [X] Il n'est pas valide, le code produira une erreur.  
 **Il faut un élément conteneur pour les composants**
+
+On peut utiliser un conteneur virtuel `React.Fragment`
+
+```js
+const Post = () => {
+    return (
+        <p>post</p>
+    );
+};
+const App = () => (
+    <React.Fragment>
+        <Post />
+        <Post />
+        <Post />
+    </React.Fragment>
+);
+```  
 
 ## Question 5  
 
