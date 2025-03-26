@@ -101,9 +101,9 @@ const MESSAGES = [
 #### Hiérarchie des composants :
 
 ```jsx
-<App />
-└── <Messages />
-    ├── <Message />
+<App />   <-- Page principale
+└── <Messages /> <-- Page pour présenter les messages
+    ├── <Message />   <-- liste de composants réutilisables 
     ├── <Message />
     └── <Message />
 ```
@@ -111,6 +111,11 @@ const MESSAGES = [
 **Indications** :
 - Utilisez `.map()` pour parcourir les messages.
 - Chaque composant doit être défini comme une fonction indépendante.
+
+## Indications
+
+>[!NOTE]
+>Plus tard pour structurer vos projets en développement vous créerez des dossiers `pages` et `components` dans l'architecture applicative. 
 
 ---
 
