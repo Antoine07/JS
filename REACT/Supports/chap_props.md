@@ -114,8 +114,8 @@ const MESSAGES = [
 
 >[!NOTE]
 >Une page est généralement un composant React qui correspond à une route spécifique et qui structure une partie fixe de l'interface. Elle est souvent placée dans un dossier `pages/` et utilisée avec un routeur comme TanStack Router ou React Router.
-Un composant placé dans un dossier `components/` est plus réutilisable et peut être utilisé plusieurs fois dans différentes pages. Il encapsule une partie de l'interface qui peut être indépendante de la navigation (exemple : un bouton, une carte d'utilisateur, un formulaire).
-Avec TanStack Router, chaque page est souvent associée à une route définie dans le routeur, et les composants peuvent être inclus dans ces pages pour construire l'interface de manière modulaire. 🚀
+Un composant placé dans un dossier `components/` est réutilisable il, par exemple, être utilisé plusieurs fois dans différentes pages. Il encapsule une partie de l'interface qui peut être en soi indépendante (exemple : un bouton, une carte d'utilisateur, un formulaire).
+Avec TanStack Router, chaque page est souvent associée à une route définie dans le routeur, et les composants peuvent être inclus dans ces pages pour construire l'interface de manière modulaire. 
 
 
 ---
