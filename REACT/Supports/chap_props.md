@@ -179,3 +179,4 @@ console.log(fruitNames);
 // Résultat : ['POMME', 'BANANE']
 ```
 
+![filter and map ](./images/filter-map.png)
