@@ -101,9 +101,9 @@ const MESSAGES = [
 #### Hiérarchie des composants :
 
 ```jsx
-<App />   <-- Page principale
-└── <Messages /> <-- Page pour présenter les messages
-    ├── <Message />   <-- liste de composants réutilisables 
+<App />   // Page principale
+└── <Messages /> // Page pour présenter les messages
+    ├── <Message />  // liste de composants réutilisables 
     ├── <Message />
     └── <Message />
 ```
@@ -112,10 +112,9 @@ const MESSAGES = [
 - Utilisez `.map()` pour parcourir les messages.
 - Chaque composant doit être défini comme une fonction indépendante.
 
-## Indications
-
 >[!NOTE]
->Plus tard pour structurer vos projets en développement vous créerez des dossiers `pages` et `components` dans l'architecture applicative. 
+>Plus tard dans le cours quand on installera avec `vitejs` une structure pour vos projets, et en développement, vous créerez des dossiers `pages` et `components` dans votre architecture applicative, une page est un élément `fixe` et un composant est réutilisable et peut se répéter dans le code. Les pages auront évidemment un rôle important dans la navigation que nous ferons avec `TanStack Router`.
+
 
 ---
 
