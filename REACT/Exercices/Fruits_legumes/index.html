@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+    <div id="root" class="flex justify-center items-center min-h-screen"></div>
+
+    <script type="text/babel">
+        const PRODUCTS = [
+            { title: 'Chou', isFruit: false, id: 1, color: 'text-green-700' },
+            { title: 'Ail', isFruit: false, id: 2, color: 'text-yellow-700' },
+            { title: 'Pomme', isFruit: true, id: 3, color: 'text-red-500' },
+        ];
+
+        function ShoppingList({ products }) {
+            return (
+                <div className="w-96 max-w-lg p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+                    <h2 className="text-xl font-bold text-purple-600">Fruits</h2>
+                    <ul className="list-disc pl-5">
+                        {products.filter(p => p.isFruit).map(product => (
+                            <li key={product.id} className={product.color}>
+                                {product.title}
+                            </li>
+                        ))}
+                    </ul>
+                    <h2 className="text-xl font-bold text-green-600 mt-4">Légumes</h2>
+                    <ul className="list-disc pl-5">
+                        {products.filter(p => !p.isFruit).map(product => (
+                            <li key={product.id} className={product.color}>
+                                {product.title}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+
+        function App() {
+            return (
+                <div className="flex flex-col items-center">
+                    <ShoppingList products={PRODUCTS} />
+                </div>
+            );
+        }
+
+        const root = document.getElementById('root');
+        ReactDOM.createRoot(root).render(<App />);
+    </script>
+
+</body>
+
+</html>
