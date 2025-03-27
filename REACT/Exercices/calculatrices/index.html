@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+    <style>
+        /* Style global */
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #20232a; /* Fond sombre React */
+            color: white;
+            margin: 0;
+        }
+
+        .calculator {
+            background: #282c34; /* Fond React-like */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 20px rgba(0, 191, 255, 0.2);
+            text-align: center;
+            width: 320px;
+        }
+
+        h2 {
+            color: #61dafb; /* Bleu React */
+            font-size: 24px;
+        }
+
+        input, select, button {
+            width: 90%;
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input, select {
+            background: #3a3f4b;
+            color: white;
+            border: 1px solid #61dafb;
+            text-align: center;
+        }
+
+        input::placeholder {
+            color: #bbb;
+        }
+
+        button {
+            background: #61dafb;
+            color: #282c34;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(97, 218, 251, 0.4);
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #4db1e7;
+            box-shadow: 0px 0px 15px rgba(97, 218, 251, 0.7);
+        }
+
+        .result {
+            margin-top: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #61dafb;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React; // assignation par décomposition 
+
+        function Calculator() {
+            const [num1, setNum1] = useState('');
+            const [num2, setNum2] = useState('');
+            const [operation, setOperation] = useState('+');
+            const [result, setResult] = useState(null);
+
+            const calculate = () => {
+                // error first
+                const a = parseFloat(num1);
+                const b = parseFloat(num2);
+                if (isNaN(a) || isNaN(b)) {
+                    setResult('Veuillez entrer des nombres valides');
+                    return;
+                }
+
+                let res;
+                switch (operation) {
+                    case '+': res = a + b; break;
+                    case '-': res = a - b; break;
+                    case '*': res = a * b; break;
+                    case '/': res = b !== 0 ? a / b : 'Erreur : division par zéro'; break;
+                    default: res = 'Opération invalide';
+                }
+                setResult(res);
+            };
+
+            return (
+                <div className="calculator">
+                    <h2>Calculatrice React</h2>
+                    <input 
+                        type="number" 
+                        placeholder="Nombre 1" 
+                        value={num1} 
+                        onChange={e => setNum1(e.target.value)}
+                    />
+                    <select value={operation} onChange={e => setOperation(e.target.value)}>
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">×</option>
+                        <option value="/">÷</option>
+                    </select>
+                    <input 
+                        type="number" 
+                        placeholder="Nombre 2" 
+                        value={num2} 
+                        onChange={e => setNum2(e.target.value)}
+                    />
+                    <br />
+                    <button onClick={calculate}>Calculer</button>
+                    {result !== null && <div className="result">Résultat: {result}</div>}
+                </div>
+            );
+        }
+        const root = document.getElementById('root');
+        ReactDOM.createRoot(root).render(<Calculator />);
+    </script>
+
+</body>
+</html>

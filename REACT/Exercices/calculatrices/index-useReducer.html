@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice React</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+    <style>
+        /* Style global */
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #20232a;
+            /* Fond sombre React */
+            color: white;
+            margin: 0;
+        }
+
+        .calculator {
+            background: #282c34;
+            /* Fond React-like */
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 20px rgba(0, 191, 255, 0.2);
+            text-align: center;
+            width: 320px;
+        }
+
+        h2 {
+            color: #61dafb;
+            /* Bleu React */
+            font-size: 24px;
+        }
+
+        input,
+        select,
+        button {
+            width: 90%;
+            margin: 10px 0;
+            padding: 12px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        input,
+        select {
+            background: #3a3f4b;
+            color: white;
+            border: 1px solid #61dafb;
+            text-align: center;
+        }
+
+        input::placeholder {
+            color: #bbb;
+        }
+
+        button {
+            background: #61dafb;
+            color: #282c34;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(97, 218, 251, 0.4);
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #4db1e7;
+            box-shadow: 0px 0px 15px rgba(97, 218, 251, 0.7);
+        }
+
+        .result {
+            margin-top: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #61dafb;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useReducer } = React;
+
+        const initialState = {
+            num1: '',
+            num2: '',
+            operations: ['+', '-', '*', '/'],
+            operation: '+',
+            result: null
+        };
+
+        function reducer(state, action) {
+            switch (action.type) {
+                case 'SET_NUM1':
+                    console.log(action);
+                    console.log({ ...state, num1: action.payload })
+
+                    return { ...state, num1: action.payload };
+                case 'SET_NUM2':
+                    return { ...state, num2: action.payload };
+                case 'SET_OPERATION':
+                    return { ...state, operation: action.payload };
+                case 'CALCULATE':
+                    const a = parseFloat(state.num1);
+                    const b = parseFloat(state.num2);
+                    if (isNaN(a) || isNaN(b)) {
+                        return { ...state, result: 'Veuillez entrer des nombres valides' };
+                    }
+
+                    let res;
+                    switch (state.operation) {
+                        case '+':
+                            res = a + b;
+                            break;
+                        case '-':
+                            res = a - b;
+                            break;
+                        case '*':
+                            res = a * b;
+                            break;
+                        case '/':
+                            res = b !== 0 ? a / b : 'Erreur : division par zéro';
+                            break;
+                        default:
+                            res = 'Opération invalide';
+                    }
+                    return { ...state, result: res };
+                default:
+                    return state;
+            }
+        }
+
+        function Calculator() {
+            const [state, dispatch] = useReducer(reducer, initialState);// logique métier dans le reducer et les données dans le state
+            console.log(state);
+            return (
+                <div className="calculator">
+                    <h2>Calculatrice React</h2>
+                    <input
+                        type="number"
+                        placeholder="Nombre 1"
+                        value={state.num1}
+                        onChange={e => dispatch({ type: 'SET_NUM1', payload: e.target.value })}
+                    />
+                    <select
+                        value={state.operation}
+                        onChange={e => dispatch({ type: 'SET_OPERATION', payload: e.target.value })}
+                    >
+                        {state.operations.map((op, i) => (
+                            <option key={i} value={op}>{op}</option>
+                        ))}
+                    </select>
+                    <input
+                        type="number"
+                        placeholder="Nombre 2"
+                        value={state.num2}
+                        onChange={e => dispatch({ type: 'SET_NUM2', payload: e.target.value })}
+                    />
+                    <br />
+                    <button onClick={() => dispatch({ type: 'CALCULATE' })}>Calculer</button>
+                    {state.result !== null && <div className="result">Résultat: {state.result}</div>}
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<Calculator />);
+    </script>
+
+</body>
+
+</html>
