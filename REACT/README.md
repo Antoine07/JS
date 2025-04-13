@@ -19,6 +19,9 @@
 11. Context API [support de cours context API ](./Supports/chap-context-api.md)
 12. Code d'exemple [Exemple simple de context](./Examples/example-context.html)
 
+13. Zustand [introduction](./Supports/chap-intro-zustand.md)
+14. Combine Zustand [combine introduction](./Supports/chap-zustand-combine.md)
+
 ## Modèle
 
 1. Modèle [model](./Supports/model.html)
@@ -36,3 +39,6 @@
 
 [support de cours context API ](./Supports/chap-context-api.md)
 
+## TP pratique noté sur 5pts
+
+1. Créez à partir
