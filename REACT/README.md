@@ -10,6 +10,7 @@
 6. State [state](./Supports/chap_state.md)
 7. Hooks [Hook](./Supports/chap-hook-part_01.md)
   - Correction calculatrice [cal](./Exercices/calculatrices)
+  - Correction calculatrice avec vite [cal](./Exercices/app-calculatrice/)
 9. Form [form](./Supports/chap_form.md)
 10. Composition [component](./Supports/chap-composition.md)
 
