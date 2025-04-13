@@ -9,8 +9,9 @@
 5. QCM [qcm](./QCM/qcm-generalites.md)
 6. State [state](./Supports/chap_state.md)
 7. Hooks [Hook](./Supports/chap-hook-part_01.md)
-8. Form [form](./Supports/chap_form.md)
-9. Composition [component](./Supports/chap-composition.md)
+  - Correction calculatrice [cal](./Exercices/calculatrices)
+9. Form [form](./Supports/chap_form.md)
+10. Composition [component](./Supports/chap-composition.md)
 
 
 ## Modèle
