@@ -106,6 +106,6 @@ Contrairement à Redux Toolkit (qui utilise un `Provider`), Zustand fonctionne s
 ---
 
 ### 5. **Avantages de Zustand**
-- **Simplicité** : Pas besoin de boilerplate comme dans Redux.
+- **Simplicité** : Pas besoin de boilerplate ( beaucoup de code et de configuration ) comme dans Redux ou Redux Toolkit
 - **Performances** : Les composants ne se re-rendent que lorsque la partie pertinente du store change.
 - **Flexibilité** : Tu peux structurer ton store comme tu le souhaites.
