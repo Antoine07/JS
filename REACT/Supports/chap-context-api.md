@@ -66,6 +66,12 @@ src/
 
 ---
 
+## `En image`
+
+![ctx](./images/ctx.png)
+
+---
+
 ## 1️⃣ `ctx.jsx` – Création du contexte + provider
 
 ```js

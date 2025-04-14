@@ -9,7 +9,7 @@ npm install zustand
 ---
 
 ### 2. **Créer un Store**
-Avec Zustand, tu définis ton store dans un fichier séparé (ex. `store.js` ou `useStore.js`).
+Avec Zustand, on définit son store dans un fichier séparé (ex. `store.js` ou `useStore.js`).
 
 #### Exemple : un store simple avec une liste et des actions
 ```javascript
@@ -35,7 +35,11 @@ export default useStore;
 ---
 
 ### 3. **Consommer le Store dans les Composants**
-Avec Zustand, tu peux directement consommer le store dans tes composants sans avoir besoin de créer de contexte ou d'envelopper ton application.
+Avec Zustand, on peut directement consommer le store dans ses composants sans avoir besoin de créer de contexte ou d'envelopper son application.
+
+En image
+
+![zustand ](./images/state-zustand.png)
 
 #### Exemple 1 : Ajouter des utilisateurs
 ```javascript
