@@ -50,11 +50,12 @@ Aider les étudiants à planifier et structurer un talk ou une présentation en 
 
 ### 🕐 **Jour 1** : 
 - Mise en place du projet avec Vite ou Create React App
-- Structure de l'app (pages, Zustand store, composants de base)
+- Structure de l'app (pages, components, Zustand store)
 - Création des fonctionnalités : création de talk, liste, suppression, modification
 
 ### 🕑 **Jour 2** :
-- Ajout du timer, éditeur de plan, thèmes
-- Sauvegarde dans le localStorage
 - Finitions + responsive + test
-- Présentation finale du projet
+- Présentation finale du projet avec vos `slides`.
+- Sauvegarde dans le localStorage (si vous avez le temps)
+- Le routing
+
