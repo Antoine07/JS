@@ -6,10 +6,10 @@ Aider les étudiants à planifier et structurer un talk ou une présentation en 
 
 ---
 
-## 🛠️ **Stack technique**
+## 🛠️ **Stacks techniques**
 - **React** pour l'interface
-- **Zustand** pour la gestion d'état globale (thèmes, liste des talks, timer...)
-- **Tailwind CSS** pour un style moderne rapide
+- **Zustand** pour la gestion d'état globale (thèmes, liste des talks)
+- **Tailwind CSS** ou **Bootstrap CSS**
 
 ---
 
@@ -26,36 +26,40 @@ Aider les étudiants à planifier et structurer un talk ou une présentation en 
   - Le titre
   - Le sujet
   - La durée estimée en minutes
-  - Le nom de(s) présentateur(s)
+  - Le nom de présentatrice/présentateur
   - Un objectif (ce que l'audience doit retenir)
 
-> **Zustand** gère la liste des talks, stockée dans `localStorage`.
+> **Zustand** gère la liste des talks, stockée dans `localStorage` en option si vous avez le temps.
 
 ---
 
 ### 2. 📋 Liste des Talks
-- Affichage de tous les talks créés
-- Possibilité de modifier/supprimer un talk
-- Tri par durée ou ordre alphabétique
+- Affichage de tous les talks créés.
+- Possibilité de msupprimer un talk et en option de le modifier.
+- Tri par durée ou ordre alphabétique.
+- Les talks passés avec un design spécifique pour signifier qu'ils ne sont plus disponibles.
+
 
 ---
 
-### 3. 🎨 Thème clair/sombre
+### 3. 🎨 Thème clair/sombre en option si vous avez le temps
 - Toggle dark/light mode stocké dans Zustand
 - Utilisation de Tailwind pour gérer les thèmes
+
+Remarque vous pouvez soit utiliser un ctx `context API` ou `Zustand`
 
 ---
 
 ## 📅 Organisation du projet sur 2 jours :
 
 ### 🕐 **Jour 1** : 
-- Mise en place du projet avec Vite ou Create React App
-- Structure de l'app (pages, components, Zustand store)
-- Création des fonctionnalités : création de talk, liste, suppression, modification
+- Mise en place du projet avec Vite
+- Structure de l'app (pages, components, Zustand store, services, et routing si vous avez le temps)
+- Création des fonctionnalités : création de talk, liste, suppression, modification en option.
 
 ### 🕑 **Jour 2** :
-- Finitions + responsive + test
-- Présentation finale du projet avec vos `slides`.
-- Sauvegarde dans le localStorage (si vous avez le temps)
-- Le routing
+- Finitions + responsive
+- Préparation finale du projet avec vos `slides`.
+- Sauvegarde dans le localStorage en option.
+- Le routing en option.
 
