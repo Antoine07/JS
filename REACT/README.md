@@ -16,11 +16,13 @@
 
 --- 
 
-11. Context API [support de cours context API ](./Supports/chap-context-api.md)
-12. Code d'exemple [Exemple simple de context](./Examples/example-context.html)
+11. Limitation du `useReducer` [useReducer](./Supports/chap-usereducer-limite.md)
 
-13. Zustand [introduction](./Supports/chap-intro-zustand.md)
-14. Combine Zustand [combine introduction](./Supports/chap-zustand-combine.md)
+12. Context API [support de cours context API ](./Supports/chap-context-api.md)
+13. Code d'exemple [Exemple simple de context](./Examples/example-context.html)
+
+14. Zustand [introduction](./Supports/chap-intro-zustand.md)
+15. Combine Zustand [combine introduction](./Supports/chap-zustand-combine.md)
 
 ## Modèle
 
@@ -39,6 +41,5 @@
 
 [support de cours context API ](./Supports/chap-context-api.md)
 
-## TP pratique noté sur 5pts
-
-1. Créez à partir
+## Vite JS
+[vitejs](./Supports/chap-vitejs.md)
