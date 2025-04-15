@@ -45,5 +45,6 @@
 [vitejs](./Supports/chap-vitejs.md)
 
 ## TP sur 2 jours
-[sujet](../TP/projet_talk.md)
-[présentation du projet](../TP/presentation.md)
+1. [sujet](../TP/projet_talk.md)
+
+1. [présentation du projet](../TP/presentation.md)
