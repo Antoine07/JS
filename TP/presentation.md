@@ -67,5 +67,3 @@
 - Prévoyez **1 à 2 minutes de battement** pour les questions si besoin.
 
 ---
-
-Tu veux aussi que je t'aide à rédiger les différentes parties ?
